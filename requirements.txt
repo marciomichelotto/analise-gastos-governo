@@ -1,0 +1,3 @@
+pandas>=2.0.0
+sqlalchemy>=2.0.0
+pyodbc>=4.0.0
