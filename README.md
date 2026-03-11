@@ -1,23 +1,29 @@
-# Análise dos Gastos do Governo por Ministério
+# Projeto 1: Análise das Despesas do Governo Federal por Ministério
 
-Este projeto tem como objetivo analisar as despesas públicas dos ministérios da Educação, Saúde, Segurança e Defesa, com dados extraídos do Portal da Transparência.
+Este repositório reúne meu **primeiro projeto de Data Analytics** com dados públicos do Portal da Transparência.
+A proposta é intencionalmente simples: organizar os dados e gerar uma análise clara da evolução dos gastos nos ministérios da **Educação, Saúde, Segurança e Defesa**.
 
-## Objetivos
-- Identificar padrões de gastos ao longo do tempo
-- Comparar investimentos entre os ministérios
-- Criar visualizações de fácil entendimento para tomada de decisão
+## Objetivo do projeto
+- Comparar despesas entre ministérios
+- Observar evolução temporal dos gastos
+- Apresentar os resultados em visualização de fácil leitura
 
-## Ferramentas utilizadas
-- Python (pandas, sqlalchemy, pyodbc)
+## O que foi entregue
+- Pipeline de ETL em Python (extração de CSV, tratamento e carga)
+- Estrutura relacional no SQL Server para consulta analítica
+- Dashboard no Power BI com comparativos e filtros por período/ministério
+
+## Tecnologias utilizadas
+- Python (`pandas`, `sqlalchemy`, `pyodbc`)
 - SQL Server
 - Power BI
-- Azure Data Factory (simulação de pipeline)
+- GitHub
 
 ## Pipeline Python (CSV -> SQL Server)
-Foi adicionado um pipeline em `pipeline_csv_to_sqlserver.py` para:
-1. Ler arquivo CSV
-2. Limpar e padronizar dados
-3. Carregar dados no SQL Server
+O script `pipeline_csv_to_sqlserver.py` executa:
+1. Leitura do arquivo CSV
+2. Limpeza e padronização dos dados
+3. Carga no SQL Server
 
 ### Pré-requisitos
 - Python 3.10+
@@ -35,10 +41,11 @@ python pipeline_csv_to_sqlserver.py \
   --if-exists append
 ```
 
-## Resultados
-Veja abaixo um exemplo do dashboard criado:
-
-![Exemplo do Dashboard](link-da-imagem-aqui)
+## Melhorias futuras (sem perder a simplicidade)
+- Adicionar dicionário de dados com significado das colunas
+- Incluir validações básicas de qualidade (nulos e duplicados)
+- Publicar uma imagem real do dashboard neste README
+- Criar rotina simples de atualização mensal dos dados
 
 ## Autor
 Márcio Michelotto
