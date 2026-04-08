@@ -1,36 +1,37 @@
-# Projeto 1: Análise das Despesas do Governo Federal por Ministério
+# Análise das Despesas do Governo Federal por Ministério
 
-Este repositório reúne meu **primeiro projeto de Data Analytics** com dados públicos do Portal da Transparência.
-A proposta é intencionalmente simples: organizar os dados e gerar uma análise clara da evolução dos gastos nos ministérios da **Educação, Saúde, Segurança e Defesa**.
+Primeiro projeto de análise de dados — pipeline ETL em Python, estrutura relacional no SQL Server e dashboard no Power BI com dados públicos do Portal da Transparência.
 
-## Objetivo do projeto
+> Este foi meu ponto de partida em Data Analytics. A proposta é intencionalmente simples: organizar os dados e gerar uma análise clara da evolução dos gastos nos ministérios da Educação, Saúde, Segurança e Defesa. Para uma versão mais avançada do mesmo tema, com Snowflake e camada analítica, veja [dados-governo-brasil-v2](https://github.com/marciomichelotto/dados-governo-brasil-v2).
+
+## Objetivo
+
 - Comparar despesas entre ministérios
 - Observar evolução temporal dos gastos
 - Apresentar os resultados em visualização de fácil leitura
 
 ## O que foi entregue
+
 - Pipeline de ETL em Python (extração de CSV, tratamento e carga)
 - Estrutura relacional no SQL Server para consulta analítica
-- Dashboard no Power BI com comparativos e filtros por período/ministério
+- Dashboard no Power BI com comparativos e filtros por período e ministério
 
-## Tecnologias utilizadas
-- Python (`pandas`, `sqlalchemy`, `pyodbc`)
-- SQL Server
-- Power BI
-- GitHub
+## Pipeline Python (CSV → SQL Server)
 
-## Pipeline Python (CSV -> SQL Server)
 O script `pipeline_csv_to_sqlserver.py` executa:
+
 1. Leitura do arquivo CSV
 2. Limpeza e padronização dos dados
 3. Carga no SQL Server
 
 ### Pré-requisitos
+
 - Python 3.10+
 - Pacotes: `pandas`, `sqlalchemy`, `pyodbc`
 - Driver ODBC para SQL Server (ex.: `ODBC Driver 17 for SQL Server`)
 
 ### Exemplo de execução
+
 ```bash
 python pipeline_csv_to_sqlserver.py \
   --csv-path data/GOVNOVO1.csv \
@@ -41,11 +42,19 @@ python pipeline_csv_to_sqlserver.py \
   --if-exists append
 ```
 
-## Melhorias futuras (sem perder a simplicidade)
+## Próximos passos
+
 - Adicionar dicionário de dados com significado das colunas
 - Incluir validações básicas de qualidade (nulos e duplicados)
-- Publicar uma imagem real do dashboard neste README
+- Publicar imagem do dashboard neste README
 - Criar rotina simples de atualização mensal dos dados
 
-## Autor
-Márcio Michelotto
+## Tecnologias
+
+- **Python** — `pandas`, `sqlalchemy`, `pyodbc`
+- **SQL Server** — armazenamento e consultas analíticas
+- **Power BI** — dashboard e visualizações
+
+## Fonte dos Dados
+
+[Portal da Transparência — Despesas do Governo Federal](https://portaldatransparencia.gov.br/download-de-dados/despesas)
