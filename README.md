@@ -2,7 +2,11 @@
 
 Primeiro projeto de análise de dados — pipeline ETL em Python, estrutura relacional no SQL Server e dashboard no Power BI com dados públicos do Portal da Transparência.
 
-> Este foi meu ponto de partida em Data Analytics. A proposta é intencionalmente simples: organizar os dados e gerar uma análise clara da evolução dos gastos nos ministérios da Educação, Saúde, Segurança e Defesa. Para uma versão mais avançada do mesmo tema, com Snowflake e camada analítica, veja [dados-governo-brasil-v2](https://github.com/marciomichelotto/dados-governo-brasil-v2).
+> Este foi meu ponto de partida em Data Analytics. A proposta é intencionalmente simples: organizar os dados e gerar uma análise clara da evolução dos gastos nos ministérios da Educação, Saúde, Segurança e Defesa.
+>
+> Este projeto evoluiu em duas direções complementares:
+> - **[dados-governo-brasil-v2](https://github.com/marciomichelotto/dados-governo-brasil-v2)** — foco analítico, com os principais insights de negócio (concentração orçamentária, crise de execução por ministério)
+> - **[dados-governo-brasil-v3](https://github.com/marciomichelotto/dados-governo-brasil-v3)** — foco em engenharia: arquitetura Medallion completa em Snowflake + dbt, com CI/CD e testes de qualidade automatizados
 
 ## Objetivo
 
